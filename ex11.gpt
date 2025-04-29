@@ -1,0 +1,60 @@
+algoritmo jogoTxt;
+
+variáveis
+    numero: inteiro;
+    fim-variáveis
+
+início
+
+    imprima("Você acorda dentro de uma caverna escura e silenciosa.");
+    imprima("A última coisa que vem a sua memória é de desmaiar no chão do seu quarto após achar um amuleto estranho debaixo da cama.");
+    imprima("Uma tocha acesa ilumina francamente duas relíquias sobre um pedestal.");
+    imprima("Uma voz ecoa das paredes:");
+    imprima("Uma escolha trará salvação. A outra, o fim.");
+    imprima("Escolha um objeto:");
+    imprima("1. Um relógio de Areia Antigo - Pesa em suas mãos e parece pulsar como um coração.");
+    imprima("2. Um Espelho Quebrado - suas rachaduras formam padrões estranhos que se mexem sozinhos.");
+    imprima("> ");
+    numero:= leia();
+
+    se numero = 1
+    então
+        imprima("Boa escolha. O tempo ao redor desacelera e um portal aparece à frente.");
+    senão
+    se numero = 2
+    então
+        imprima("Você vê seu próprio corpo caído no chão... segundos depois de tudo escurecer. Fim.");
+        retorne 1;
+    senão
+        imprima("Digite um número válido");
+        retorne 1;
+    fim-se
+    fim-se
+
+    imprima("A voz novamente ecoa das paredes:");
+    imprima("Você está diante de outra difícil escolha");
+    imprima("1. Entrar no portal sem hesitar");
+    imprima("Ou...");
+    imprima("2. Parar e examinar a caverna");
+    imprima("Escolha qual decisão tomar:");
+    imprima("> ");
+    numero:= leia();
+
+    se numero = 1
+    então
+        imprima("Entrar no portal foi a melhor decisão");
+        imprima("Você atravessa um vórtice de luz e acorda no chão do seu quarto.");
+        imprima("Você está vivo, porém, com dúvidas sobre o amuleto rodeando sua cabeça...");
+        retorne 0;
+    senão
+    se numero = 2 então
+        imprima("Assim que você para pra examinar a caverna o chão treme violentamente.");
+        imprima("Você percebe tarde demais que a caverna está colapsando.");
+        imprima("Esse é seu fim.");
+        retorne 1;
+    senão
+        imprima("Digite uma ação válida");
+        retorne 1;
+    fim-se
+    fim-se
+fim
